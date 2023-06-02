@@ -1,0 +1,8 @@
+<div class="lessons-list" *ngIf="users.length > 0 else message">
+    <ul>
+        <li *ngFor="let user of users;let i = index" [attr.data-index]="i">{{user.fullname}}</li>
+    </ul>
+</div>
+<ng-template #message>
+    <p>User list is empty, please add them <a data-cy="add-link" routerLink="/add">here</a></p>
+</ng-template>

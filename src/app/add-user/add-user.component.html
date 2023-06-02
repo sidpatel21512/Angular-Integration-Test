@@ -1,0 +1,18 @@
+<div style="margin:20px">
+    <div class="col-sm-3">
+        <label for="firstname" class="form-label">First Name:</label>
+        <input type="text" class="form-control" id="firstname" [(ngModel)]="firstName" (blur)="setFullName()">
+    </div>
+    <div class="col-sm-3">
+        <label for="lastname" class="form-label">Last Name:</label>
+        <input type="text" class="form-control" id="lastname" [(ngModel)]="lastName" (blur)="setFullName()">
+    </div>
+    <div class="col-sm-3">
+        <label for="fullname" class="form-label">Full Name:</label>
+        <input type="text" class="form-control" id="fullname" [(ngModel)]="fullName" disabled>
+    </div>
+    <br />
+    <div class="col-auto">
+        <button type="submit" class="btn btn-primary mb-3" id="add-button" (click)="addUser()">Add</button>
+    </div>
+</div>
